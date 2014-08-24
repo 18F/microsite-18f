@@ -5,17 +5,14 @@ curl --user "robertlread:$GITHUB_PASSWORD" --request POST --data '{"name" : "rob
 
 cd /Users/robertread/projects/testpush
 
-git clone https://github.com/MyInternetWebsite/$REPONAME.git
-cd $REPONAME
-touch README.md
-git add README.md
-git commit -m "first commit"
-git push -u origin master
-git checkout --orphan gh-pages
-git rm -rf .
-echo "$PERSONAL_NAME is cool" > index.html
+git clone https://github.com/MyInternetWebsite/microsite-template0.git
+cd microsite-template0
+git checkout gh-pages
+cat index.html | sed 's/663c8bbc10b66148ed44763d59a2ee4e/'$PERSONAL_NAME'/' > index.html.x
+mv index.html.x index.html
 git add index.html
-git commit -a -m "First pages commit"
+git commit -m "First pages commit"
+git remote set-url origin https://github.com/MyInternetWebsite/$REPONAME.git
 git push origin gh-pages
-
-
+cd ..
+rm -rf microsite-template0
