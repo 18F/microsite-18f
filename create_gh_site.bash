@@ -1,9 +1,11 @@
 #!/bin/bash
-echo "Creating reponame: $1 for a cool person named: $2"
+echo "Creating reponame: $1 for a cool person named: $2 using github user: $3 with a github password passed as the fourth argument"
 export REPONAME=$1
 export PERSONAL_NAME=$2
+export GH_USER=$3
+export GH_PASSWORD=$4
 
-curl --user "robertlread:$GITHUB_PASSWORD" --request POST --data '{"name" : "'$REPONAME'", "description": "This is a repository for '$PERSONAL_NAME'",  "homepage": "https://someurlThatAlanWillCreate",  "private": false,  "has_issues": true,  "has_wiki": true,  "has_downloads": true}' https://api.github.com/orgs/MyInternetWebsite/repos
+curl --user "$GH_USER:$GH_PASSWORD" --request POST --data '{"name" : "'$REPONAME'", "description": "This is a repository for '$PERSONAL_NAME'",  "homepage": "https://someurlThatAlanWillCreate",  "private": false,  "has_issues": true,  "has_wiki": true,  "has_downloads": true}' https://api.github.com/orgs/MyInternetWebsite/repos
 
 cd /Users/robertread/projects/testpush
 
