@@ -7,7 +7,9 @@ export GH_PASSWORD=$4
 
 curl --user "$GH_USER:$GH_PASSWORD" --request POST --data '{"name" : "'$REPONAME'", "description": "This is a repository for '$PERSONAL_NAME'",  "homepage": "https://someurlThatAlanWillCreate",  "private": false,  "has_issues": true,  "has_wiki": true,  "has_downloads": true}' https://api.github.com/orgs/MyInternetWebsite/repos
 
-cd /Users/robertread/projects/testpush
+mkdir testpush
+cd testpush
+
 
 git clone https://github.com/MyInternetWebsite/microsite-template0.git
 cd microsite-template0
@@ -20,3 +22,5 @@ git remote set-url origin https://github.com/MyInternetWebsite/$REPONAME.git
 git push origin gh-pages
 cd ..
 rm -rf microsite-template0
+cd ..
+rm -rf testpush
