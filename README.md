@@ -47,10 +47,10 @@ It will be replaced with the personal name given as the second argument.
 
 This code provides a programmatic way to generate new repos.  For
 example, you could use it to create 10 repos for a class teaching
-people how to use github, but programattically executing the script
+people how to use GitHub, but programmatically executing the script
 10 times.
 
 "With great power comes great responsibility." -- Spiderman
 
-Be considerate of github and their users.
+Be considerate of GitHub and their users.
 
