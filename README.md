@@ -31,7 +31,10 @@ To run the bash script with 7 arguments:
 > microsite-template-18f
 
 The execution below is would build "siteclonetest1" from the template
-https://github.com/microsite-tempalte-18f.git.
+https://github.com/microsite-tempalte-18f.git. This site would create
+a gh-pages site at http://18f.github.io/siteclonetest1/.
+
+
 Obviously, you could create new templates that had nothing to do with
 18F and reuse this script.
 
