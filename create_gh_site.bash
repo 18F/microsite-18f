@@ -19,7 +19,7 @@ cd testpush
 git clone $GIT_URL_TO_CLONE
 cd $GIT_REPONAME_TO_CLONE
 git checkout gh-pages
-cat index.html | sed 's/663c8bbc10b66148ed44763d59a2ee4e/'$PERSONAL_NAME'/' > index.html.x
+cat index.html | sed 's/YOUR_CONFIGURED_MICROSITE_NAME_HERE/'$PERSONAL_NAME'/' > index.html.x
 mv index.html.x index.html
 git add index.html
 git commit -m "First pages commit"

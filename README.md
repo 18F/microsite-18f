@@ -39,7 +39,7 @@ If the site, such as
 https://github.com/MyInternetWebsite/microsite-template-18f which is
 meant to a template, contains the token:
 
-> 663c8bbc10b66148ed44763d59a2ee4e
+> YOUR_CONFIGURED_MICROSITE_NAME_HERE
 
 It will be replaced with the personal name given as the second argument.
 
